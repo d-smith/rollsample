@@ -84,7 +84,7 @@ func doAuthCodeCallback(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	log.Println(fmt.Sprintf("%v", string(body)))
+	log.Println(fmt.Sprintf("response body: %v", string(body)))
 
 	var jsonResponse accessTokenResponse
 	err = json.Unmarshal(body, &jsonResponse)
